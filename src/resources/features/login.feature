@@ -1,5 +1,6 @@
 Feature: Login Feature
 
+  @scenario1
   Scenario Outline: Login with given username
     Given I navigate to website
     And I click on "Sign In" link
@@ -9,10 +10,11 @@ Feature: Login Feature
     Then I should see user <username> logged in
     Examples:
       | username                 | password         |
-      | 'fav_user'               | 'testingisfun99' |
-      | 'image_not_loading_user' | 'testingisfun99' |
-      | 'existing_orders_user'   | 'testingisfun99' |
+      | "fav_user"               | "testingisfun99" |
+      | "image_not_loading_user" | "testingisfun99" |
+      | "existing_orders_user"   | "testingisfun99" |
 
+  @scenario2
   Scenario: Login as Locked User
     Given I navigate to website
     And I click on "Sign In" link
