@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch",
-    "single" : "npx nightwatch --env browserstack.chrome"
+    "single" : "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome"
   },
   "author": "Princeton Baretto",
   "license": "MIT",
