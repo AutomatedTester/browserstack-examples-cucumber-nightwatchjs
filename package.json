@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch",
+    "parallel":"npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --parallel '3'",
     "single" : "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome"
   },
   "author": "Princeton Baretto",

@@ -1,10 +1,11 @@
 const chromedriver = require('chromedriver');
+require('dotenv').config();
 
 const bstackOptions = {
   'bstack:options': {
     "os": "OS X",
     "osVersion": "Sierra",
-    "buildName": "Nightwatch-Cucumber-Test",
+    "buildName": "Nightwatch-Cucumber-Test 9",
     "sessionName": "NightwatchJS Cucumber snippet test",
     "local": "false",
     "seleniumVersion": "4.0.0",
@@ -34,13 +35,11 @@ module.exports = {
   test_runner: {
     type: 'cucumber',
     options: {
-      feature_path: 'src/resources/features/google.feature',
+      feature_path: 'src/resources/features/login.feature',
       auto_start_session: true,
-      parallel: 2
     }
   },
-
-  src_folders: ['src/test/steps'],
+  src_folders: ['src/test/steps/'],
 
   test_settings: {
 

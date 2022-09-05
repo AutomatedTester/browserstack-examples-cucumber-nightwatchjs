@@ -38,3 +38,20 @@ Then(/^I should see "([^"]*)?" as Login Error Message$/,(api_error)=>{
                 .waitForElementVisible(".api-error",10000)
                 .assert.textContains(".api-error",api_error)
 });
+
+Given(/^I navigate to website$/, ()=> {
+    return browser.url("https://www.bstackdemo.com/").waitForElementVisible('body', 10000);;
+});
+
+
+Given(/^I open Google's search page$/, () => {
+    return browser.url('http://google.com').waitForElementVisible('body', 1000);
+  });
+  
+  Then(/^the title is "([^"]*)"$/, title => {
+    return browser.assert.title(title);
+  });
+  
+  Then(/^the Google search form exists$/, () => {
+    return browser.assert.visible('input[name="q"]');
+  });
