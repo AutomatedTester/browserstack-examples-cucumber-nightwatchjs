@@ -5,7 +5,7 @@ const bstackOptions = {
   'bstack:options': {
     "os": "OS X",
     "osVersion": "Sierra",
-    "buildName": "Nightwatch-Cucumber-Test 9",
+    "buildName": "Nightwatch-Cucumber-Test 12",
     "sessionName": "NightwatchJS Cucumber snippet test",
     "local": "false",
     "seleniumVersion": "4.0.0",
@@ -35,12 +35,12 @@ module.exports = {
   test_runner: {
     type: 'cucumber',
     options: {
-      feature_path: 'src/resources/features/login.feature',
+      feature_path: 'src/resources/features/*.feature',
       auto_start_session: true,
     }
   },
   src_folders: ['src/test/steps/'],
-
+  page_objects_path:'src/app/pages',
   test_settings: {
 
     browserstack: {
