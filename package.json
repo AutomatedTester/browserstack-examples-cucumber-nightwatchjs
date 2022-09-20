@@ -6,7 +6,9 @@
   "scripts": {
     "test": "nightwatch",
     "bstack-parallel": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --parallel ",
+    "bstack-parallel-multiple": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.firefox,browserstack.chrome --parallel ",
     "single": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags @single",
+    "single-tag": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags @single",
     "default": "npx nightwatch",
     "local": "node src/resources/conf/local.js -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.local"
 

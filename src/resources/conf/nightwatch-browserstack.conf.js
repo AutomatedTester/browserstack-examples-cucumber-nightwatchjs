@@ -1,4 +1,4 @@
-const chromedriver = require('chromedriver');
+// const chromedriver = require('chromedriver');
 require('dotenv').config();
 
 const bstackOptions = {
@@ -19,6 +19,11 @@ const bstackOptions = {
 
 const browserStack = {
   webdriver: {
+    timeout_options: {
+      timeout: 100000,
+      retry_attempts: 3
+    },
+    keep_alive: true,
     start_process: false
   },
 
@@ -79,6 +84,7 @@ module.exports = {
           "buildName": "Nightwatch-Cucumber-Test",
           "sessionName": "NightwatchJS Cucumber snippet test",
           "local": "true",
+          "localIdentifier": process.env.BROWSERSTACK_LOCAL_IDENTIFIER,
           "seleniumVersion": "4.0.0",
           userName: process.env.BROWSERSTACK_USERNAME,
           accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
