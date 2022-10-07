@@ -4,23 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch",
-    "bstack-parallel": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --parallel ",
-    "bstack-parallel-multiple": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.firefox,browserstack.chrome --parallel ",
-    "single": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags @single",
-    "single-tag": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags @single",
-    "default": "npx nightwatch",
-    "local": "node src/resources/conf/local.js -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.local"
-
+    "on-prem-single": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env default --parallel --tags 'not @local'",
+    "on-prem": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env default --tags @single",
+    "on-prem-suite": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --tags 'not @local'",
+    "bstack-parallel": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --parallel --tags 'not @local'",
+    "bstack-parallel-multiple": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js -e browserstack.chrome,browserstack.firefox,browserstack.edge,browserstack.chrome-mobile --tags 'not @local'",
+    "bstack-single": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags @single",
+    "bstack-local": "node src/resources/conf/local.js -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.local --tags @local"
   },
   "author": "Princeton Baretto",
   "license": "MIT",
   "devDependencies": {
-    "@cucumber/cucumber": "^8.5.2",
-    "chromedriver": "^105.0.0",
-    "nightwatch": "^2.3.3"
+    "chromedriver": "^105.0.1",
+    "geckodriver": "^3.0.2"
   },
   "dependencies": {
-    "browserstack-local": "^1.5.1"
+    "browserstack-local": "^1.5.1",
+    "@cucumber/cucumber": "^8.5.2",
+    "nightwatch": "^2.3.3"
   }
 }

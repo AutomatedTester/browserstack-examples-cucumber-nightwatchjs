@@ -1,5 +1,6 @@
 // const chromedriver = require('chromedriver');
 require('dotenv').config();
+process.setMaxListeners(0);
 
 const bstackOptions = {
   'bstack:options': {
@@ -49,6 +50,26 @@ module.exports = {
   page_objects_path: 'src/app/pages',
   test_settings: {
 
+    default: {
+      disable_error_log: false,
+      launch_url: 'https://nightwatchjs.org',
+
+      screenshots: {
+        enabled: false,
+        path: 'screens',
+        on_failure: true,
+      },
+
+      desiredCapabilities: {
+        browserName: 'chrome',
+      },
+
+      webdriver: {
+        start_process: true,
+        server_path: '',
+      },
+    },
+
     browserstack: {
       ...browserStack
     },
@@ -73,6 +94,32 @@ module.exports = {
         browserName: 'Edge',
         ...bstackOptions
       }
+    },
+    'browserstack.chrome-mobile': {
+      webdriver: {
+        timeout_options: {
+          timeout: 100000,
+          retry_attempts: 3
+        },
+        keep_alive: true,
+        start_process: false
+      },
+    
+      selenium: {
+        host: 'hub-cloud.browserstack.com',
+        port: 443
+      },
+      desiredCapabilities: {
+        browserName: "chrome",
+        'bstack:options': {
+          buildName: "Nightwatch-Cucumber-Test Parallel",
+          sessionName: "NightwatchJS Cucumber snippet test",
+          osVersion: "12.0",
+          deviceName: "Google Pixel 6",
+          userName: process.env.BROWSERSTACK_USERNAME,
+          accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
+        },
+      },
     },
     'browserstack.local': {
       ...browserStack,

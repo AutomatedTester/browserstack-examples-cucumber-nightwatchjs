@@ -4,3 +4,4 @@ logs
 tests_output
 .env
 local.log
+/report

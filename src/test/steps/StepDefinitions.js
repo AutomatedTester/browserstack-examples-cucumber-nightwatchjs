@@ -18,6 +18,12 @@ Given(/^I navigate to website$/, () => {
     .waitForElementVisible('body', 10000);
 });
 
+Given(/^I navigate to local website$/, () => {
+  return browser
+    .url("http://localhost:3000")
+    .waitForElementVisible('body', 10000);
+});
+
 Given(/^I click on "([^"]*)?" link$/, (selector) => {
   if (selector == 'Sign In') {
     return browser
