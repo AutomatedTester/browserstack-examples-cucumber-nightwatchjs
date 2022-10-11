@@ -54,24 +54,12 @@ This repository contains the following Cucumber tests:
 
 ## Configuring the maximum parallel test threads for this repository
 
-For all the parallel run configuration profiles, you can configure the maximum parallel test threads by changing the settings below.
+For all the parallel run configuration profiles, you can configure the maximum parallel test threads by adding the `--parallel` cli switch followed by the number of parallels.
 
--   BrowserStack
-
-    src/resources/conf/nightwatch-browserstack.conf.js
-
-    ```js
-    module.exports = {
-     ...
-
-     test_workers: {
-       ...
-      workers: 5, // change this attribute
-       ...
-     },
-    ...
-    ```
-
+```sh
+    --parallel {number}
+    # for eg: --parallel 5
+```
 
 # On Premise
 
