@@ -7,6 +7,7 @@
     "on-prem-parallel": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --parallel 5 --tags 'not @local'",
     "on-prem-single": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env default --tags @single",
     "on-prem-suite": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --tags 'not @local'",
+    "bstack":"npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags",
     "bstack-parallel": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --parallel 5 --tags 'not @local'",
     "bstack-parallel-multiple": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js -e browserstack.chrome,browserstack.firefox,browserstack.edge,browserstack.chrome-mobile --parallel 5 --tags 'not @local'",
     "bstack-single": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags @single",

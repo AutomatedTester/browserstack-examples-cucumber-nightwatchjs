@@ -46,10 +46,10 @@ module.exports = {
       auto_start_session: true,
     }
   },
+  
   src_folders: ['src/test/steps/'],
   page_objects_path: 'src/app/pages',
   test_settings: {
-
     default: {
       disable_error_log: false,
       launch_url: 'https://nightwatchjs.org',
@@ -62,11 +62,6 @@ module.exports = {
 
       desiredCapabilities: {
         browserName: 'chrome',
-      },
-
-      webdriver: {
-        start_process: true,
-        server_path: '',
       },
     },
 

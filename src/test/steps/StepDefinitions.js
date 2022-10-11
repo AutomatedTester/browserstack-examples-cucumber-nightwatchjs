@@ -1,13 +1,7 @@
 const {
   Given,
   Then,
-  When,
-  Before,
-  After
 } = require('@cucumber/cucumber');
-const {
-  markAsUntransferable
-} = require('worker_threads');
 
 
 //Common Feature Steps

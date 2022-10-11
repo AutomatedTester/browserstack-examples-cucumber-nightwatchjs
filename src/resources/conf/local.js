@@ -6,7 +6,7 @@ let bs_local;
 
 try {
     const accessKey =
-        process.env.BROWSERSTACK_ACCESS_KEY;
+        process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY';
     const pathToNightwatchExecutable =
         "./node_modules/nightwatch/bin/nightwatch";
     require.main.filename = pathToNightwatchExecutable;

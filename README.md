@@ -57,8 +57,8 @@ This repository contains the following Cucumber tests:
 For all the parallel run configuration profiles, you can configure the maximum parallel test threads by adding the `--parallel` cli switch followed by the number of parallels.
 
 ```sh
-    --parallel {number}
-    # for eg: --parallel 5
+    npm run bstack-parallel --parallel {number}
+    # for eg: npm run bstack-parallel --parallel 5
 ```
 
 # On Premise
@@ -137,7 +137,7 @@ Note: The ChromeDriver version must match the Chrome browser version on your mac
     set BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
     ```
 
-    Alternatively, you can also hardcode username and access_key objects in the [nightwatch-browserstack.conf.js](src/resources/conf/caps/browserstack.json) file.
+    Alternatively, you can also hardcode username and access_key objects in the [nightwatch-browserstack.conf.js](src/resources/conf/caps/browserstack.json) file and [local.js](src/resources/conf/local.js).
 
 Note:
 
@@ -188,8 +188,6 @@ In this section, we will run the tests in parallel on a single browser on Browse
 -   Output
 
     This run profile executes the entire test suite in parallel on a single BrowserStack browser. Please refer to your [BrowserStack dashboard](https://automate.browserstack.com/) for test results.
-
-    -   Note: By default, this execution would run maximum 10 test threads in parallel on BrowserStack. Refer to the section ["Configuring the maximum parallel test threads for this repository"](#Configuring-the-maximum-parallel-test-threads-for-this-repository) for updating the parallel thread count based on your requirements.
 
 ### Run the entire test suite in parallel on multiple BrowserStack browsers
 
@@ -242,3 +240,7 @@ In this section, we will run the tests in parallel on multiple browsers on Brows
 -   [Using Automate REST API](https://www.browserstack.com/automate/rest-api) to access information about your tests via the command-line interface
 -   Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
 -   For testing public web applications behind IP restriction, [Inbound IP Whitelisting](https://www.browserstack.com/local-testing/inbound-ip-whitelisting) can be enabled with the [BrowserStack Enterprise](https://www.browserstack.com/enterprise) offering
+
+## Open Issues
+- https://github.com/nightwatchjs/nightwatch/issues/3102
+- https://github.com/nightwatchjs/nightwatch/issues/3037
