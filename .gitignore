@@ -1,0 +1,7 @@
+node_modules
+package-lock.json
+logs
+tests_output
+.env
+local.log
+/report
