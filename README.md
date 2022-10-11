@@ -10,7 +10,7 @@ Nightwatch.js is an integrated, easy to use End-to-End testing solution for web 
 
 This BrowserStack Example repository demonstrates a CucumberJS test framework written in Node.js and Nightwatchjs 2.3 with parallel testing capabilities. The CucmberJS test scripts are written for the open source [BrowserStack Demo web application](https://bstackdemo.com) ([Github](https://github.com/browserstack/browserstack-demo-app)). This BrowserStack Demo App is an e-commerce web application which showcases multiple real-world user scenarios. The app is bundled with offers data, orders data and products data that contains everything you need to start using the app and run tests out-of-the-box.
 
-The CucmberJS test tests are run on different platforms like on-prem and BrowserStack using various run configurations and test capabilities.
+The CucmberJS tests are run on different platforms like on-prem and BrowserStack using various run configurations and test capabilities.
 
 ---
 
@@ -98,13 +98,13 @@ Note: The ChromeDriver version must match the Chrome browser version on your mac
     To run a specific senario, use the following command with the additional 'tag-name' argument:
 
     ```sh
-    npm run on-prem --tags <tag-name>
+    npm run on-prem --tags @<tag-name>
     # for eg: npm run on-prem --tags @user
     ```
 
     where, the argument 'tag-name' can be any senario tag configured in this repository.
 
-    E.g. "user", "login" or any other tag as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
+    E.g. "@user", "@login" or any other tag as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
 
 -   Output
 
@@ -153,14 +153,14 @@ Note: The ChromeDriver version must match the Chrome browser version on your mac
 
 Note:
 
--   We have configured a list of test capabilities in the [nightwatch-browserstack.conf.js](src/resources/conf/nightwatch-browserstack.conf.js) file. You can certainly update them based on your device / browser test requirements.
+-   We have configured a list of environments with test capabilities in the [nightwatch-browserstack.conf.js](src/resources/conf/nightwatch-browserstack.conf.js) file. You can certainly update them based on your device / browser test requirements.
 -   The exact test capability values can be easily identified using the [Browserstack Capability Generator](https://browserstack.com/automate/capabilities)
 
 ## Running Your Tests
 
 ### Run a specific test on BrowserStack
 
-In this section, we will run a single test on Chrome browser on Browserstack. 
+In this section, we will run a single test on Chrome browser on Browserstack.  
 
 -   How to run the test?
 
@@ -173,13 +173,13 @@ In this section, we will run a single test on Chrome browser on Browserstack.
     To run a specific test file, use the following command with the additional 'tag-name' argument:
 
     ```sh
-    npm run bstack --tags <tag-name>
+    npm run bstack --tags @<tag-name>
     # for eg npm run bstack --tags @user
     ```
 
     where, the argument 'tag-name' can be any tag configured in this repository.
 
-    E.g. "user", "login" or any other tag as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
+    E.g. "@user", "@login" or any other tag as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
 
 -   Output
 
