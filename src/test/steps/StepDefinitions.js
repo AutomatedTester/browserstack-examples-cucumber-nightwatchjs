@@ -1,10 +1,16 @@
 const {
   Given,
   Then,
+  Before,
 } = require('@cucumber/cucumber');
 
 
 //Common Feature Steps
+
+Before((scenario) => {
+  const scenarioName = scenario.pickle.name;
+  browser.executeScript('browserstack_executor: {"action": "setSessionName", "arguments": {"name": "'+ scenarioName +'"}}');
+  });
 
 Given(/^I navigate to website$/, () => {
   return browser
