@@ -1,6 +1,7 @@
 // const chromedriver = require('chromedriver');
 require('dotenv').config();
 process.setMaxListeners(0);
+const timeStamp = new Date().getTime();
 
 const bstackOptions = {
   "browserVersion": "latest",
@@ -43,9 +44,9 @@ module.exports = {
   page_objects_path: 'src/app/pages',
 
   '@nightwatch/browserstack': {
-    browserstackLocal: true, 
-    browserstackLocalOptions: {
-      localIdentifier: "test123"
+    browserstackLocal: true,
+    browserstackLocalOptions:{
+      localIdentifier: timeStamp.toString()
     }
   },
 
@@ -69,7 +70,7 @@ module.exports = {
           "os": "OS X",
           "osVersion": "Sierra",
           "local":"true",
-          "localIdentifier":"test123",
+          "localIdentifier": timeStamp.toString(),
           "buildName": "Nightwatch-Cucumber-Test-Local",
           "seleniumVersion": "4.0.0",
           userName: process.env.BROWSERSTACK_USERNAME,

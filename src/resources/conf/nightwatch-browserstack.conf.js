@@ -107,7 +107,6 @@ module.exports = {
         browserName: "chrome",
         'bstack:options': {
           buildName: "Nightwatch-Cucumber-Test Parallel",
-          // sessionName: "NightwatchJS Cucumber snippet test",
           osVersion: "12.0",
           deviceName: "Google Pixel 6",
           userName: process.env.BROWSERSTACK_USERNAME,
