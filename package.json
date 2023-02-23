@@ -7,11 +7,11 @@
     "on-prem-parallel": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --parallel 5 --tags 'not @local'",
     "on-prem-single": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env default --tags @single",
     "on-prem-suite": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --tags 'not @local'",
-    "bstack":"npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags",
+    "bstack": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags",
     "bstack-parallel": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --parallel 5 --tags 'not @local'",
     "bstack-parallel-multiple": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js -e browserstack.chrome,browserstack.firefox,browserstack.edge,browserstack.chrome-mobile --parallel 5 --tags 'not @local'",
     "bstack-single": "npx nightwatch -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.chrome --tags @single",
-    "bstack-local": "node src/resources/conf/local.js -c src/resources/conf/nightwatch-browserstack.conf.js --env browserstack.local --tags @local"
+    "bstack-local": "npx nightwatch -c src/resources/conf/nightwatch-browserstack-local.conf.js --env browserstack.local --tags @local"
   },
   "author": "Princeton Baretto",
   "license": "MIT",
@@ -20,8 +20,8 @@
     "geckodriver": "^3.0.2"
   },
   "dependencies": {
-    "browserstack-local": "^1.5.1",
     "@cucumber/cucumber": "^7.3.2",
-    "nightwatch": "^2.3.8"
+    "nightwatch": "^2.6.14",
+    "@nightwatch/browserstack": "^0.1.2"
   }
 }

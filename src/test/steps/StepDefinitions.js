@@ -1,10 +1,16 @@
 const {
   Given,
   Then,
+  Before,
 } = require('@cucumber/cucumber');
 
 
 //Common Feature Steps
+
+Before((scenario) => {
+  const scenarioName = scenario.pickle.name;
+  browser.executeScript('browserstack_executor: {"action": "setSessionName", "arguments": {"name": "' + scenarioName + '"}}');
+});
 
 Given(/^I navigate to website$/, () => {
   return browser
@@ -29,7 +35,7 @@ Given(/^I click on "([^"]*)?" link$/, (selector) => {
       .click("#offers");
   } else if (selector == 'Orders') {
     return browser
-      .waitForElementVisible("#orders",10000)
+      .waitForElementVisible("#orders", 10000)
       .click("#orders")
   }
 });
@@ -52,11 +58,11 @@ Given(/^I enter shipping details "([^"]*)?", "([^"]*)?", "([^"]*)?", "([^"]*)?" 
   );
 })
 
-Given(/^I click on Checkout Button$/,()=>{
+Given(/^I click on Checkout Button$/, () => {
   return browser
-            .click('#checkout-shipping-continue')
-            .pause(700)
-            .click(".optimizedCheckout-buttonSecondary")
+    .click('#checkout-shipping-continue')
+    .pause(700)
+    .click(".optimizedCheckout-buttonSecondary")
 })
 
 //Login Feature Steps

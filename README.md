@@ -136,7 +136,7 @@ Note: The ChromeDriver version must match the Chrome browser version on your mac
     set BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
     ```
 
-    Alternatively, you can also hardcode username and access_key objects in the [nightwatch-browserstack.conf.js](src/resources/conf/caps/browserstack.json) file and [local.js](src/resources/conf/local.js).
+    Alternatively, you can also hardcode username and access_key objects in the [nightwatch-browserstack.conf.js](src/resources/conf/caps/browserstack.json) file and [nightwatch-browserstack-local.conf.js](src/resources/conf/nightwatch-browserstack-local.conf.js).
 
 Note:
 
