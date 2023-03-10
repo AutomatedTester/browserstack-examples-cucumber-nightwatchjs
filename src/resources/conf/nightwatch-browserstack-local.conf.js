@@ -69,8 +69,6 @@ module.exports = {
         'bstack:options': {
           "os": "OS X",
           "osVersion": "Sierra",
-          "local":"true",
-          "localIdentifier": timeStamp.toString(),
           "buildName": "Nightwatch-Cucumber-Test-Local",
           "seleniumVersion": "4.0.0",
           userName: process.env.BROWSERSTACK_USERNAME,

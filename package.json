@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@cucumber/cucumber": "^7.3.2",
-    "nightwatch": "^2.6.14",
-    "@nightwatch/browserstack": "^0.1.2"
+    "@nightwatch/browserstack": "^0.1.2",
+    "nightwatch": "^2.6.16"
   }
 }
