@@ -243,4 +243,3 @@ In this section, we will run the tests in parallel on multiple browsers on Brows
 ## Open Issues
 - https://github.com/nightwatchjs/nightwatch/issues/3102
 - https://github.com/nightwatchjs/nightwatch/issues/3037
-- Currently the Nightwatch BrowserStack Plugin when used with the Cucumber runner will start BrowserStack Local before the test execution and stop the BrowserStack Local instance after the test execution however as of now the user will still need to pass the `local` and `localIdentifier` capabilities. These capabilities will be auto propogated in the later iterations of the Nightwatch BrowserStack Plugin at which point manually adding the `local` and `localIdentifier` capabilities will not be necessary.
