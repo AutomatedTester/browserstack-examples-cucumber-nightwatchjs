@@ -16,12 +16,10 @@
   "author": "Princeton Baretto",
   "license": "MIT",
   "devDependencies": {
-    "chromedriver": "^105.0.1",
-    "geckodriver": "^3.0.2"
+    "@nightwatch/browserstack": "^3.2.4",
+    "nightwatch": "^3.5.0"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^7.3.2",
-    "@nightwatch/browserstack": "^0.1.2",
-    "nightwatch": "^2.6.16"
+    "@cucumber/cucumber": "^7.3.2"
   }
 }
